@@ -6,6 +6,7 @@
 """
 
 from . import PointField_Constants
+from ._LaserScan_ import LaserScan_
 from ._PointCloud2_ import PointCloud2_
 from ._PointField_ import PointField_
-__all__ = ["PointField_Constants", "PointCloud2_", "PointField_", ]
+__all__ = ["PointField_Constants", "LaserScan_", "PointCloud2_", "PointField_", ]

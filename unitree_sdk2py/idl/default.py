@@ -113,6 +113,9 @@ def sensor_msgs_msg_dds__PointField_Constants_PointField_():
 def sensor_msgs_msg_dds__PointField_Constants_PointCloud2_():
     return PointCloud2_(std_msgs_msg_dds__Header_(), 0, 0, [], False, 0, 0, [], False)
 
+def sensor_msgs_msg_dds__LaserScan_():
+    return LaserScan_(std_msgs_msg_dds__Header_(), 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, [], [])
+
 
 """
 " unitree_go.msg.dds_ dafault
