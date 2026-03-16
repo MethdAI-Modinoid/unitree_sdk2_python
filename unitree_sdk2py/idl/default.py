@@ -17,6 +17,7 @@ from .unitree_hg.msg.dds_ import MainBoardState_ as HGMainBoardState_
 from .unitree_hg.msg.dds_ import PressSensorState_ as HGPressSensorState_
 from .unitree_hg.msg.dds_ import HandCmd_ as HGHandCmd_
 from .unitree_hg.msg.dds_ import HandState_ as HGHandState_
+from .unitree_hg.msg.dds_ import OdoState_ as HGOdoState_
 
 """
 " builtin_interfaces_msgs.msg.dds_ dafault
@@ -102,6 +103,7 @@ def nav_msgs_msg_dds__OccupancyGrid_():
 def nav_msgs_msg_dds__Odometry_():
     return Odometry_(std_msgs_msg_dds__Header_(), "", geometry_msgs_msg_dds__PoseWithCovariance_(),
             geometry_msgs_msg_dds__TwistWithCovariance_())
+
 
 
 """
@@ -240,6 +242,8 @@ def unitree_hg_msg_dds__HandState_():
                          unitree_hg_msg_dds__IMUState_(), 
                          0.0, 0.0, 0.0, 0.0, [0, 0], [0, 0])
 
+def unitree_hg_msg_dds__OdoState_():
+    return HGOdoState_([0, 0], 0, [0.0, 0.0, 0.0], [0.0, 0.0, 0.0, 0.0], [0.0, 0.0, 0.0], [0.0, 0.0, 0.0], 0)
 
 """
 " unitree_api.msg.dds_ dafault
