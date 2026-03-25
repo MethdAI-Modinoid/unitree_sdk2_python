@@ -5,6 +5,8 @@ from .nav_msgs.msg.dds_ import *
 from .sensor_msgs.msg.dds_ import *
 from .unitree_go.msg.dds_ import *
 from .unitree_api.msg.dds_ import *
+from .tf2_msgs.msg.dds_ import *
+from .rosgraph_msgs.msg.dds_ import *
 
 # IDL for unitree_hg
 from .unitree_hg.msg.dds_ import LowCmd_ as HGLowCmd_
@@ -89,6 +91,26 @@ def geometry_msgs_msg_dds__TwistWithCovariance_():
 
 def geometry_msgs_msg_dds__TwistWithCovarianceStamped_():
     return TwistWithCovarianceStamped_(std_msgs_msg_dds__Header_(), geometry_msgs_msg_dds__TwistWithCovariance_())
+
+def geometry_msgs_msg_dds__Transform_():
+    return Transform_(geometry_msgs_msg_dds__Vector3_(), geometry_msgs_msg_dds__Quaternion_())
+
+def geometry_msgs_msg_dds__TransformStamped_():
+    return TransformStamped_(std_msgs_msg_dds__Header_(), "", geometry_msgs_msg_dds__Transform_())
+
+
+"""
+" tf2_msgs.msg.dds_ default
+"""
+def tf2_msgs_msg_dds__TFMessage_():
+    return TFMessage_([])
+
+
+"""
+" rosgraph_msgs.msg.dds_ default
+"""
+def rosgraph_msgs_msg_dds__Clock_():
+    return Clock_(builtin_interfaces_msgs_msg_dds__Time_())
 
 
 """
